@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Apuntes HTML: Etiquetas Semánticas</title>
+</head>
+<body>
+  <header>
+    <h1>Apuntes de HTML: Etiquetas Semánticas</h1>
+    <p>Curso en profundidad de HTML y CSS</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#seccionamiento">Etiquetas de seccionamiento</a></li>
+      <li><a href="#contenido">Etiquetas de contenido</a></li>
+      <li><a href="#en-linea">Etiquetas en línea</a></li>
+      <li><a href="#multimedia">Contenido incrustado y multimedia</a></li>
+      <li><a href="#tablas">Etiquetas de tabla</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <article id="seccionamiento">
+      <h2>Etiquetas de seccionamiento</h2>
+      <section>
+        <p><strong>&lt;header&gt;:</strong> La cabecera de una sección de contenido o de la página web. Suele contener la marca o el logotipo del sitio web.</p>
+        <p><strong>&lt;nav&gt;:</strong> Contiene los enlaces de navegación de una sección o de la página web.</p>
+        <p><strong>&lt;footer&gt;:</strong> El pie de página de una sección o página. Puede incluir enlaces secundarios, copyright, políticas, etc.</p>
+        <p><strong>&lt;main&gt;:</strong> Contenido principal de una sección o de la página.</p>
+        <p><strong>&lt;aside&gt;:</strong> Contenido secundario no esencial para comprender el contenido principal.</p>
+        <p><strong>&lt;article&gt;:</strong> Bloque de contenido independiente y autónomo (blog, producto, etc.).</p>
+        <p><strong>&lt;section&gt;:</strong> Sección independiente dentro del documento.</p>
+        <details>
+          <summary>&lt;details&gt; y &lt;summary&gt;</summary>
+          <p><strong>&lt;details&gt;:</strong> Sección colapsable que se puede ampliar.</p>
+          <p><strong>&lt;summary&gt;:</strong> Título o resumen del contenido colapsado.</p>
+        </details>
+        <p><strong>Encabezados &lt;h1&gt; a &lt;h6&gt;:</strong> Encabezados jerárquicos, de más importante (&lt;h1&gt;) a menos (&lt;h6&gt;).</p>
+      </section>
+    </article>
+
+    <article id="contenido">
+      <h2>Etiquetas de contenido</h2>
+      <section>
+        <p><strong>&lt;blockquote&gt;:</strong> Define una cita larga.</p>
+        <p><strong>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;:</strong> Lista de descripción.</p>
+        <dl>
+          <dt>&lt;dt&gt;</dt>
+          <dd>Describe el término.</dd>
+          <dt>&lt;dd&gt;</dt>
+          <dd>Descripción del término anterior.</dd>
+        </dl>
+        <figure>
+          <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo">
+          <figcaption>&lt;figcaption&gt;: Pie de foto para la imagen</figcaption>
+        </figure>
+        <hr>
+        <ul>
+          <li><strong>&lt;li&gt;:</strong> Elemento de lista.</li>
+        </ul>
+        <menu>
+          <li>Alternativa semántica a <code>&lt;ul&gt;</code></li>
+        </menu>
+        <ol>
+          <li><strong>&lt;ol&gt;:</strong> Lista ordenada.</li>
+        </ol>
+        <p><strong>&lt;p&gt;:</strong> Define un párrafo.</p>
+        <pre>
+Texto preformateado
+Con saltos y espacios
+        </pre>
+      </section>
+    </article>
+
+    <article id="en-linea">
+      <h2>Etiquetas en línea</h2>
+      <section>
+        <p><a href="#">Enlace</a> usando &lt;a&gt;</p>
+        <p><abbr title="HyperText Markup Language">&lt;abbr&gt;: HTML</abbr></p>
+        <p><b>Texto en negrita (&lt;b&gt;)</b> vs. <strong>Importante (&lt;strong&gt;)</strong></p>
+        <p>Salto de línea aquí<br>Texto en nueva línea (&lt;br&gt;)</p>
+        <p><cite>Nombre de una obra (&lt;cite&gt;)</cite></p>
+        <p><code>console.log("Hola")</code> (&lt;code&gt;)</p>
+        <p><data value="2025-06-25">25 de junio de 2025</data> (&lt;data&gt;)</p>
+        <p><em>Énfasis (&lt;em&gt;)</em> vs. <i>Texto en cursiva (&lt;i&gt;)</i></p>
+        <p><mark>Texto resaltado (&lt;mark&gt;)</mark></p>
+        <p><q>Cita corta (&lt;q&gt;)</q></p>
+        <p><s>Texto tachado (&lt;s&gt;)</s></p>
+        <p><samp>Salida de programa (&lt;samp&gt;)</samp></p>
+        <p><small>Texto pequeño (&lt;small&gt;)</small></p>
+        <p><span>Contenedor genérico (&lt;span&gt;)</span></p>
+        <p><sub>Subíndice (&lt;sub&gt;)</sub> y <sup>Superíndice (&lt;sup&gt;)</sup></p>
+        <p><time datetime="2025-06-25">25 de junio de 2025</time> (&lt;time&gt;)</p>
+        <p><u>Texto subrayado (&lt;u&gt;)</u></p>
+        <p>Variable: <var>x</var></p>
+      </section>
+    </article>
+
+    <article id="multimedia">
+      <h2>Contenido incrustado y multimedia</h2>
+      <section>
+        <p><strong>&lt;audio&gt;:</strong> Incrusta audio.</p>
+        <audio controls>
+          <source src="audio.mp3" type="audio/mp3">
+        </audio>
+        <p><strong>&lt;canvas&gt;:</strong> Dibujo de gráficos 2D/3D.</p>
+        <canvas width="100" height="100" style="border:1px solid #000;"></canvas>
+        <p><strong>&lt;embed&gt;:</strong> Contenido externo.</p>
+        <embed src="https://example.com/file.pdf" type="application/pdf" width="300" height="200">
+        <p><strong>&lt;iframe&gt;:</strong> Página web embebida.</p>
+        <iframe src="https://example.com" width="300" height="200"></iframe>
+        <p><strong>&lt;img&gt;:</strong> Imagen simple.</p>
+        <img src="https://via.placeholder.com/100" alt="Imagen de prueba">
+        <p><strong>&lt;object&gt;:</strong> Objeto multimedia.</p>
+        <object data="file.swf" type="application/x-shockwave-flash" width="300" height="200"></object>
+        <p><strong>&lt;picture&gt;:</strong> Imagen con fuentes alternativas.</p>
+        <picture>
+          <source srcset="imagen.webp" type="image/webp">
+          <img src="imagen.jpg" alt="Ejemplo responsive">
+        </picture>
+        <p><strong>&lt;video&gt;:</strong> Video incrustado.</p>
+        <video controls width="300">
+          <source src="video.mp4" type="video/mp4">
+        </video>
+        <p><strong>&lt;svg&gt;:</strong> Gráfico vectorial.</p>
+        <svg width="100" height="100">
+          <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        </svg>
+      </section>
+    </article>
+
+    <article id="tablas">
+      <h2>Etiquetas de tabla</h2>
+      <table border="1">
+        <caption>Título de la tabla (&lt;caption&gt;)</caption>
+        <colgroup>
+          <col style="background-color: #f0f0f0;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>&lt;th&gt; Encabezado</th>
+            <th>Otro encabezado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;td&gt; Celda 1</td>
+            <td>Celda 2</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Pie de tabla (&lt;tfoot&gt;)</td>
+          </tr>
+        </tfoot>
+      </table>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Apuntes de HTML. <small>Todos los derechos reservados.</small></p>
+  </footer>
+</body>
+</html>

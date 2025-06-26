@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Apuntes HTML: Metaetiquetas</title>
+  <meta name="description" content="Hoja de referencia para etiquetas meta en HTML.">
+  <meta name="author" content="JOSE GIOVANI">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <header>
+    <h1>Metaetiquetas en HTML</h1>
+    <p>Las etiquetas <code>&lt;meta&gt;</code> permiten incluir información adicional sobre el documento HTML, útil para navegadores, buscadores y dispositivos móviles.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Metaetiqueta de conjunto de caracteres</h2>
+      <p>Define la codificación de caracteres de la página.</p>
+      <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>2. Metaetiquetas básicas para SEO</h2>
+      <dl>
+        <dt><code>&lt;meta name="description" content="..."&gt;</code></dt>
+        <dd>Breve descripción de la página para los motores de búsqueda.</dd>
+
+        <dt><code>&lt;meta name="title" content="..."&gt;</code></dt>
+        <dd>Título de la página (complementario a la etiqueta <code>&lt;title&gt;</code>).</dd>
+
+        <dt><code>&lt;meta name="author" content="..."&gt;</code></dt>
+        <dd>Nombre del autor o autores del documento.</dd>
+
+        <dt><code>&lt;meta name="language" content="..."&gt;</code></dt>
+        <dd>Idioma principal del contenido (por ejemplo, "español").</dd>
+
+        <dt><code>&lt;meta name="robots" content="index,follow"&gt;</code></dt>
+        <dd>Indica a los motores de búsqueda que indexen y sigan los enlaces.</dd>
+
+        <dt><code>&lt;meta name="googlebot" content="notranslate"&gt;</code></dt>
+        <dd>Evita que Google traduzca automáticamente la página.</dd>
+
+        <dt><code>&lt;meta name="revised" content="Fecha y hora"&gt;</code></dt>
+        <dd>Última fecha de modificación del documento.</dd>
+
+        <dt><code>&lt;meta name="rating" content="safe for kids"&gt;</code></dt>
+        <dd>Define la audiencia apropiada para el contenido.</dd>
+
+        <dt><code>&lt;meta name="copyright" content="..."&gt;</code></dt>
+        <dd>Información de derechos de autor.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>3. Metaetiquetas <code>http-equiv</code></h2>
+      <p>Simulan cabeceras HTTP (no recomendadas para uso moderno, pero aún comunes).</p>
+      <dl>
+        <dt><code>&lt;meta http-equiv="refresh" content="30"&gt;</code></dt>
+        <dd>Recarga la página cada 30 segundos.</dd>
+
+        <dt><code>&lt;meta http-equiv="content-type" content="text/html"&gt;</code></dt>
+        <dd>Define el tipo de contenido que representa el documento.</dd>
+
+        <dt><code>&lt;meta http-equiv="default-style" content="..."&gt;</code></dt>
+        <dd>Indica el estilo predeterminado.</dd>
+
+        <dt><code>&lt;meta http-equiv="Content-language" content="es"&gt;</code></dt>
+        <dd>Especifica el idioma del contenido.</dd>
+
+        <dt><code>&lt;meta http-equiv="Cache-Control" content="no-cache"&gt;</code></dt>
+        <dd>Evita que el navegador almacene en caché la página.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>4. Metaetiquetas para diseño adaptable (Responsive)</h2>
+      <dl>
+        <dt><code>&lt;meta name="format-detection" content="telephone=yes"&gt;</code></dt>
+        <dd>Convierte números en enlaces para llamadas telefónicas en móviles.</dd>
+
+        <dt><code>&lt;meta name="HandheldFriendly" content="true"&gt;</code></dt>
+        <dd>Optimiza la visualización en dispositivos móviles antiguos.</dd>
+
+        <dt><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></dt>
+        <dd>Escala correctamente el contenido en pantallas móviles.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>Apuntes creados como referencia de estudio sobre HTML. Última edición: <time datetime="2025-06-25">25 de junio de 2025</time></p>
+  </footer>
+
+</body>
+</html>

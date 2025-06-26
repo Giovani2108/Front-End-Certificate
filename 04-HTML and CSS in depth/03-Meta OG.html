@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Apuntes HTML: Open Graph</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Metaetiquetas Open Graph (OG) -->
+  <meta property="og:title" content="Título atractivo de la página">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tusitio.com/imagen.jpg">
+  <meta property="og:url" content="https://tusitio.com/esta-pagina">
+  <meta property="og:description" content="Resumen breve de la página para mostrar en redes sociales.">
+  <meta property="og:locale" content="es_ES">
+</head>
+
+<body>
+  <header>
+    <h1>Metaetiquetas Open Graph (OG)</h1>
+    <p>Permiten controlar cómo se verá tu página cuando se comparta en redes sociales. Se colocan en la sección <code>&lt;head&gt;</code> del documento HTML.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>¿Qué son las etiquetas OG?</h2>
+      <p>Son metadatos diseñados por Facebook (Open Graph Protocol) y reconocidos por muchas plataformas sociales para generar una "tarjeta visual" cuando se comparte una URL.</p>
+    </section>
+
+    <section>
+      <h2>Etiquetas OG comunes</h2>
+      <dl>
+        <dt><code>&lt;meta property="og:title" content="..."&gt;</code></dt>
+        <dd>Título de la página que aparecerá en la tarjeta.</dd>
+
+        <dt><code>&lt;meta property="og:type" content="..."&gt;</code></dt>
+        <dd>Tipo de contenido. Ejemplos comunes: <code>website</code>, <code>article</code>, <code>video.movie</code>.</dd>
+
+        <dt><code>&lt;meta property="og:image" content="URL de la imagen"&gt;</code></dt>
+        <dd>Imagen de vista previa. Debe tener buena resolución (por ejemplo, 1200×630 px).</dd>
+
+        <dt><code>&lt;meta property="og:url" content="..."&gt;</code></dt>
+        <dd>URL canónica de la página (la que quieres que se muestre).</dd>
+
+        <dt><code>&lt;meta property="og:description" content="..."&gt;</code></dt>
+        <dd>Descripción breve del contenido. Similar a la meta descripción SEO.</dd>
+
+        <dt><code>&lt;meta property="og:locale" content="es_ES"&gt;</code></dt>
+        <dd>Idioma y región del contenido (por ejemplo: <code>es_ES</code>, <code>en_US</code>).</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Ejemplo completo en el &lt;head&gt;</h2>
+      <pre><code>&lt;meta property="og:title" content="Mi blog personal"&gt;
+&lt;meta property="og:type" content="article"&gt;
+&lt;meta property="og:image" content="https://miblog.com/imagen-portada.jpg"&gt;
+&lt;meta property="og:url" content="https://miblog.com/articulo1"&gt;
+&lt;meta property="og:description" content="En este artículo te enseño cómo usar Open Graph en HTML."&gt;
+&lt;meta property="og:locale" content="es_ES"&gt;</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>Este apunte fue creado como parte del curso de HTML y CSS. Última edición: <time datetime="2025-06-25">25 de junio de 2025</time></p>
+  </footer>
+</body>
+</html>
