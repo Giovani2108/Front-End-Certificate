@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>05 - Tipos de Entrada en Formularios HTML</title>
+  <meta name="description" content="Guía práctica de los tipos de entrada (input type) disponibles en HTML para construir formularios accesibles y funcionales.">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <h1>05 - Tipos de Entrada en Formularios HTML</h1>
+  <p>
+    En HTML, la etiqueta <code>&lt;input&gt;</code> cambia su comportamiento según el valor de su atributo <code>type</code>. Aquí tienes una guía rápida para saber cuál usar según la información que necesitas recolectar.
+  </p>
+
+  <form action="#" method="POST">
+
+    <fieldset>
+      <legend>Texto y Contraseña</legend>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" placeholder="Tu nombre">
+
+      <label for="pwd">Contraseña:</label>
+      <input type="password" id="pwd" name="pwd" placeholder="********">
+    </fieldset>
+
+    <fieldset>
+      <legend>Fecha y Tiempo</legend>
+      <label for="date">Fecha:</label>
+      <input type="date" id="date" name="date">
+
+      <label for="datetime">Fecha y hora:</label>
+      <input type="datetime-local" id="datetime" name="datetime">
+
+      <label for="month">Mes:</label>
+      <input type="month" id="month" name="month">
+
+      <label for="week">Semana:</label>
+      <input type="week" id="week" name="week">
+
+      <label for="time">Hora:</label>
+      <input type="time" id="time" name="time">
+    </fieldset>
+
+    <fieldset>
+      <legend>Contacto y Web</legend>
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="tel">Teléfono:</label>
+      <input type="tel" id="tel" name="tel" pattern="[+]{1}[0-9]{11,14}" placeholder="+12345678900">
+
+      <label for="url">Página web:</label>
+      <input type="url" id="url" name="url" placeholder="https://ejemplo.com">
+    </fieldset>
+
+    <fieldset>
+      <legend>Selección de opciones</legend>
+      <p>Checkboxes:</p>
+      <input type="checkbox" id="dogs" name="mascota" value="Perros">
+      <label for="dogs">Me gustan los perros</label><br>
+
+      <input type="checkbox" id="cats" name="mascota" value="Gatos">
+      <label for="cats">Me gustan los gatos</label>
+
+      <p>Radios (una sola opción):</p>
+      <input type="radio" id="light" name="tema" value="Claro">
+      <label for="light">Claro</label>
+
+      <input type="radio" id="dark" name="tema" value="Oscuro">
+      <label for="dark">Oscuro</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Números y Rangos</legend>
+      <label for="quantity">Cantidad (1-5):</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="5">
+
+      <label for="range">Volumen (0-10):</label>
+      <input type="range" id="range" name="range" min="0" max="10">
+    </fieldset>
+
+    <fieldset>
+      <legend>Búsqueda y Archivos</legend>
+      <label for="search">Buscar en Google:</label>
+      <input type="search" id="search" name="search">
+
+      <label for="file">Selecciona un archivo:</label>
+      <input type="file" id="file" name="archivo" multiple accept=".jpg,.png,.pdf">
+    </fieldset>
+
+    <fieldset>
+      <legend>Botones</legend>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Reiniciar">
+      <input type="button" value="Haz clic" onclick="alert('¡Hola!')">
+
+      <br><br>
+      <button type="button" onclick="alert('¿Continuar?')">
+        <img src="https://via.placeholder.com/32" alt="Continuar" width="32" height="32">
+        Continuar
+      </button>
+
+      <br><br>
+      <input type="image" src="https://via.placeholder.com/48" alt="Enviar" width="48" height="48">
+    </fieldset>
+
+    <fieldset>
+      <legend>Oculto (invisible al usuario)</legend>
+      <input type="hidden" id="userId" name="userId" value="123456">
+    </fieldset>
+
+  </form>
+
+  <footer>
+    <p>Última actualización: <time datetime="2025-06-25">25 de junio de 2025</time></p>
+  </footer>
+</body>
+</html>

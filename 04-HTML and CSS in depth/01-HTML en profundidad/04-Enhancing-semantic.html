@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 - Mejorando la Semántica HTML</title>
+  <meta name="description" content="Aprende por qué y cómo usar etiquetas semánticas en HTML para mejorar la estructura, accesibilidad y mantenimiento de tus sitios web.">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <h1>04 - Mejorando la Semántica HTML</h1>
+    <p>Evita usar contenedores genéricos como <code>&lt;div&gt;</code> para todo. En su lugar, utiliza etiquetas semánticas que describen el propósito del contenido.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>¿Por qué usar etiquetas semánticas?</h2>
+      <ul>
+        <li><strong>Claridad estructural:</strong> Describe mejor la intención del contenido.</li>
+        <li><strong>Accesibilidad:</strong> Los lectores de pantalla y buscadores interpretan mejor la página.</li>
+        <li><strong>Mantenibilidad:</strong> El código es más legible para otros desarrolladores (¡y para ti en el futuro!).</li>
+        <li><strong>SEO:</strong> Mejora la forma en que los motores de búsqueda entienden tu contenido.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ejemplo sin semántica (NO recomendado)</h2>
+      <pre><code>&lt;div class="header"&gt;
+  &lt;h1&gt;Welcome to My Blog&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="nav"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="content"&gt;
+  &lt;div id="about"&gt;...&lt;/div&gt;
+  &lt;div class="article"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="footer"&gt;
+  &lt;p&gt;Contacto...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>Ejemplo con etiquetas semánticas (RECOMENDADO)</h2>
+      <pre><code>&lt;header&gt;
+  &lt;h1&gt;Welcome to My Blog&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+  &lt;section id="about"&gt;
+    &lt;h2&gt;About Me&lt;/h2&gt;
+    &lt;p&gt;Breve introducción sobre el autor.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;article&gt;
+    &lt;h2&gt;Últimos artículos&lt;/h2&gt;
+    &lt;article&gt;
+      &lt;h3&gt;Artículo 1&lt;/h3&gt;
+      &lt;p&gt;Resumen del artículo.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;Contacto: email@example.com&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>CSS más limpio</h2>
+      <p>Con semántica, puedes evitar clases innecesarias y seleccionar directamente por etiqueta:</p>
+      <pre><code>/* En lugar de usar .header, .nav, .content */
+header {
+  background-color: #f0f0f0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+footer {
+  text-align: center;
+}</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>Este apunte fue creado como parte del curso HTML y CSS. Última edición: <time datetime="2025-06-25">25 de junio de 2025</time></p>
+  </footer>
+</body>
+</html>

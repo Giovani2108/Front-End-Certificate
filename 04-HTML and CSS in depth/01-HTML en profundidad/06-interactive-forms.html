@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>06 - Validación de Formularios HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>06 - Validación de Formularios HTML</h1>
+  <form onsubmit="return false;">
+
+    <fieldset>
+      <legend><code>required</code>, <code>text</code></legend>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+    </fieldset>
+
+    <fieldset>
+      <legend><code>maxlength</code>, <code>minlength</code>, <code>password</code></legend>
+      <label for="desc">Descripción:</label>
+      <input type="text" id="desc" name="desc" maxlength="50" placeholder="Breve descripción">
+      <label for="clave">Contraseña:</label>
+      <input type="password" id="clave" name="clave" minlength="8" placeholder="********">
+    </fieldset>
+
+    <fieldset>
+      <legend><code>number</code>, <code>date</code>, <code>min</code>, <code>max</code></legend>
+      <label for="edad">Edad (18-99):</label>
+      <input type="number" id="edad" name="edad" min="18" max="99">
+      <label for="fecha">Fecha evento:</label>
+      <input type="date" id="fecha" name="fecha" min="2025-01-01" max="2025-12-31">
+    </fieldset>
+
+    <fieldset>
+      <legend><code>multiple</code>, <code>file</code>, <code>email</code></legend>
+      <label for="archivos">Subir archivos:</label>
+      <input type="file" id="archivos" name="archivos" multiple accept=".jpg,.png,.pdf">
+      <label for="emails">Emails (coma separados):</label>
+      <input type="email" id="emails" name="emails" multiple placeholder="ejemplo@mail.com">
+    </fieldset>
+
+    <fieldset>
+      <legend><code>pattern</code>, <code>tel</code></legend>
+      <label for="telefono">Teléfono (+123...):</label>
+      <input type="tel" id="telefono" name="telefono" pattern="[+]{1}[0-9]{11,14}" placeholder="+12345678900">
+      <label for="codigo">Código postal:</label>
+      <input type="text" id="codigo" name="codigo" pattern="^\d{5}$" placeholder="75001">
+    </fieldset>
+
+    <fieldset>
+      <legend><code>datalist</code></legend>
+      <label for="ciudad">Ciudad:</label>
+      <input list="ciudades" id="ciudad" name="ciudad" placeholder="Elige o escribe">
+      <datalist id="ciudades">
+        <option value="Madrid">
+        <option value="Barcelona">
+        <option value="Valencia">
+        <option value="Sevilla">
+        <option value="Bilbao">
+      </datalist>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>select</code>, <code>optgroup</code>, <code>option</code></legend>
+      <label for="curso">Curso:</label>
+      <select id="curso" name="curso" required>
+        <optgroup label="Desarrollo Web">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+        </optgroup>
+        <optgroup label="Programación">
+          <option value="js">JavaScript</option>
+          <option value="python">Python</option>
+        </optgroup>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>textarea</code></legend>
+      <label for="comentarios">Comentarios:</label>
+      <textarea id="comentarios" name="comentarios" rows="4" cols="40" maxlength="200" placeholder="Escribe tus comentarios..."></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>button</code></legend>
+      <button type="button" onclick="alert('¡Gracias por tu clic!')">Haz clic</button>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>output</code></legend>
+      <label for="range">Valor:</label>
+      <input type="range" id="range" name="range" min="0" max="100" oninput="valor.value = range.value">
+      <output id="valor">50</output>
+    </fieldset>
+
+    <fieldset>
+      <legend>Botones finales</legend>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpiar">
+    </fieldset>
+
+  </form>
+
+  <footer>
+    <p>Última actualización: <time datetime="2025-06-25">25 de junio de 2025</time></p>
+  </footer>
+</body>
+</html>

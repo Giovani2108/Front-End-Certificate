@@ -1,0 +1,31 @@
+body {
+    font-family: sans-serif;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.6;
+    padding: 2rem;
+}
+h1, h2 {
+    color: #333;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+legend {
+    font-weight: bold;
+}
+label {
+    display: inline-block;
+    margin-top: 1rem;
+}
+input, button, select {
+    margin: 0.5rem 0;
+    padding: 0.3rem;
+}
+code {
+    background: #eee;
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+}

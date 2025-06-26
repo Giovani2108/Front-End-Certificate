@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>07 - action y method en Formularios</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>07 - Envío de Formularios: <code>action</code> y <code>method</code></h1>
+
+  <p>
+    La etiqueta <code>&lt;form&gt;</code> envía datos al servidor. Para controlar cómo y dónde se envían usamos:
+  </p>
+
+  <ul>
+    <li><code>action</code>: URL donde se envían los datos.</li>
+    <li><code>method</code>: método HTTP para enviar los datos, <code>GET</code> o <code>POST</code>.</li>
+  </ul>
+
+  <h2>Tipos de método</h2>
+  <p><strong>GET:</strong> envía datos en la URL (visible). Útil para búsquedas o datos no sensibles.</p>
+  <p><strong>POST:</strong> envía datos en el cuerpo de la petición (no visible). Ideal para información privada, como contraseñas.</p>
+
+  <h3>Ejemplo GET</h3>
+  <pre>
+&lt;form action="/buscar" method="get"&gt;
+  &lt;input type="text" name="q" placeholder="Buscar..." /&gt;
+  &lt;input type="submit" value="Buscar" /&gt;
+&lt;/form&gt;
+  </pre>
+
+  <h3>Ejemplo POST</h3>
+  <pre>
+&lt;form action="/login" method="post"&gt;
+  &lt;input type="text" name="usuario" placeholder="Usuario" required /&gt;
+  &lt;input type="password" name="clave" placeholder="Contraseña" required /&gt;
+  &lt;input type="submit" value="Entrar" /&gt;
+&lt;/form&gt;
+  </pre>
+
+  <p><em>Si no pones <code>method</code>, el formulario usa <code>GET</code> por defecto.</em></p>
+
+</body>
+</html>
