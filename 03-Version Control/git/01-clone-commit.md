@@ -37,7 +37,6 @@
 # -------------------------------------------------------
 # Modificar archivos localmente
 # -------------------------------------------------------
-# Este es mi comentario NUEVOOOOOO
 # 1. Entra al proyecto:
 #    cd repositorio
 
