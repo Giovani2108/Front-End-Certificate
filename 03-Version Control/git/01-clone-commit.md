@@ -23,8 +23,6 @@
 # 3. Si el repo es privado, usa tu usuario y un token como contraseña.
 #    (El token se genera en: https://github.com/settings/tokens)
 
-# ---
-
 # Opción 2: Clonar con SSH
 
 # 1. Genera una clave SSH:
