@@ -16,7 +16,6 @@
 # Opción 1: Clonar con HTTPS y token personal
 
 # 1. Copia la URL HTTPS desde GitHub:
-#    https://github.com/usuario/repositorio.git
 
 # 2. En tu terminal, escribe:
     git clone https://github.com/usuario/repositorio.git
