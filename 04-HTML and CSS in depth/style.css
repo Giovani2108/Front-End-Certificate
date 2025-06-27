@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Marcellus SC', serif;
+  font-weight: 200;
+}
+
+body {
+  background-color: white;
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header General */
+.main-header {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(/img/hero.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* Barra superior */
+.header-top {
+  background-color: black;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.header-top p {
+  color: white;
+}
+
+/* Contenedor navegación */
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  width: 130px;
+}
+
+/* Menú centrado */
+.nav-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-center ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.item-menu {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: large;
+}
+
+/* Botonera derecha */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav-icons .login-link {
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 4rem 2rem;
+  min-height: 400px;
+}
+
+.hero-text {
+  max-width: 500px;
+  text-align: left;
+  color: white;
+}
+
+/* Main Content */
+.main-content {
+  background-color: #f9f9f9;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.main-content section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.section-highlight article,
+.section-features article {
+  flex: 1 1 30%;
+  min-width: 250px;
+}
+
+
+
+.section-features {
+  justify-content: center;
+}
+
+/* Estilos para tarjetas con sombra */
+.section-features article {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.section-features article:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-weight: lighter;
+  font-family: 'Lora', serif;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.footer-logo {
+  width: 200px;
+}
+
+.p-footer {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: right;
+  flex: 1;
+}
+
+.principal-image {
+  height: 500px;
+  border-radius: 5%;
+}
+
+
+
+
+.hero-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: white;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid white;
+  color:white;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-2px);
+}

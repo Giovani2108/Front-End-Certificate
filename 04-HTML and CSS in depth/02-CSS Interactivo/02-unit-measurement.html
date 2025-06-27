@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>02 - Unidades de Medida en CSS</title>
+  <link rel="stylesheet" href="styles/02-unit-measurement.css" />
+</head>
+<body>
+
+  <h1>02 - Unidades de Medida en CSS</h1>
+
+  <section>
+    <h2>Unidades Absolutas</h2>
+    <p>
+      Son valores fijos, no cambian según dispositivo o pantalla. Útiles para impresión o tamaños conocidos.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Nombre</th>
+          <th>Equivalencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>px</td><td>Píxeles</td><td>1px = 1/96 in</td></tr>
+        <tr><td>cm</td><td>Centímetros</td><td>1cm = 96px / 2.54in</td></tr>
+        <tr><td>mm</td><td>Milímetros</td><td>1mm = 1/10 cm</td></tr>
+        <tr><td>in</td><td>Pulgadas</td><td>1in = 2.54 cm = 96px</td></tr>
+        <tr><td>pt</td><td>Puntos</td><td>1pt = 1/72 in</td></tr>
+        <tr><td>pc</td><td>Picas</td><td>1pc = 1/6 in</td></tr>
+        <tr><td>Q</td><td>Cuartos de milímetro</td><td>1Q = 1/40 cm</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Unidades Relativas</h2>
+    <p>
+      Se definen en relación a otros elementos o al viewport, ideales para diseños responsivos.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Unidad</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>em</td><td>Tamaño de fuente del elemento padre</td></tr>
+        <tr><td>rem</td><td>Tamaño de fuente del elemento raíz (&lt;html&gt;)</td></tr>
+        <tr><td>vw</td><td>1% del ancho del viewport</td></tr>
+        <tr><td>vh</td><td>1% del alto del viewport</td></tr>
+        <tr><td>vmin</td><td>1% de la dimensión menor del viewport</td></tr>
+        <tr><td>vmax</td><td>1% de la dimensión mayor del viewport</td></tr>
+        <tr><td>%</td><td>Porcentaje respecto al elemento padre</td></tr>
+        <tr><td>ch</td><td>Ancho del carácter "0" de la fuente actual</td></tr>
+        <tr><td>ex</td><td>Altura de la letra "x" de la fuente actual</td></tr>
+        <tr><td>lh</td><td>Altura de línea del elemento padre</td></tr>
+        <tr><td>rlh</td><td>Altura de línea del elemento raíz</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Ejemplo práctico</h2>
+    <div class="box absolute">Caja con <code>width: 200px;</code></div>
+    <div class="box relative">Caja con <code>width: 20vw;</code></div>
+    <div class="box relative-rem">Caja con <code>width: 10rem;</code></div>
+  </section>
+
+</body>
+</html>

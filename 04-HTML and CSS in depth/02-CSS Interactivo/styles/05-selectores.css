@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: #f9f9f9;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 6px #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+th, td {
+  border: 1px solid #aaa;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: #def0fc;
+}
+
+ol, ul {
+  padding-left: 1.5rem;
+}
+
+.selector-ejemplo {
+  margin-top: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+  background-color: #add8e6;
+  color: blue;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Otra regla con menor especificidad */
+div.selector-ejemplo {
+  color: green;
+}
+
+/* Regla con clase y elemento */
+div#ejemplo {
+  color: orange;
+}
+
+
+
+.combinador-ejemplo {
+  background-color: #fff3cd;
+  padding: 1rem;
+  border: 1px solid #f0c36d;
+  border-radius: 5px;
+}
+
+/* Selector descendiente: cualquier p dentro de div */
+.combinador-ejemplo div p {
+  color: darkblue;
+  font-style: italic;
+}
+
+/* Selector hijo directo: no aplica aquí pero añadido como ejemplo */
+.combinador-ejemplo > p {
+  font-weight: bold;
+}
+
+/* Hermano adyacente: solo el primer <p> justo después de <h2> */
+.combinador-ejemplo h2 + p {
+  color: green;
+}
+
+/* Hermanos generales: todos los <p> después de <h2>, no necesariamente adyacentes */
+.combinador-ejemplo h2 ~ p {
+  background-color: #e1f3e1;
+  border-left: 4px solid green;
+  padding-left: 0.5rem;
+}

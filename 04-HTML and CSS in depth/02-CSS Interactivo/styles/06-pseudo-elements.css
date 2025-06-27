@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: #f9f9f9;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 0 6px #ccc;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+pre {
+  background-color: #efefef;
+  padding: 0.5rem;
+  overflow-x: auto;
+  border-radius: 5px;
+}
+
+code {
+  background-color: #eee;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+/* Pseudoelementos */
+.first-letter-demo li::first-letter {
+  color: coral;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.first-line-demo li::first-line {
+  color: lightseagreen;
+  text-decoration: underline;
+}
+
+.selection-demo::selection {
+  color: brown;
+  background-color: antiquewhite;
+}
+
+.marker-demo li::marker {
+  color: cornflowerblue;
+  content: '★ ';
+  font-size: 1.2em;
+}
+
+.tip::before {
+  content: "💡 Consejo: ";
+  color: darkslategray;
+  background-color: #f0e68c;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.tip::after {
+  content: " ❗";
+  color: crimson;
+  font-weight: bold;
+}
+
+/* Pseudoclases: hover y active */
+.buttons-demo {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+button.interactivos {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid #0077cc;
+  background-color: #e0f0ff;
+  color: #0077cc;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+button.cursor:hover {
+  background-color: #7c0668;
+  color:#e0f0ff;
+  border-color: #005fa3;
+}
+
+button.clic:active {
+  background-color: #99ccff;
+  transform: scale(0.97);
+  color: #001f3f;
+}

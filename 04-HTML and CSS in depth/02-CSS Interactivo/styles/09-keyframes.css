@@ -1,0 +1,60 @@
+body {
+font-family: Arial, sans-serif;
+max-width: 700px;
+margin: 2rem auto;
+padding: 0 1rem;
+background-color: #f9f9f9;
+color: #333;
+}
+
+h1, h2 {
+text-align: center;
+}
+
+section {
+background: white;
+padding: 1rem;
+border-radius: 6px;
+box-shadow: 0 0 5px #ccc;
+margin-bottom: 2rem;
+}
+
+pre {
+background-color: #eee;
+padding: 0.5rem;
+border-radius: 4px;
+overflow-x: auto;
+}
+
+code {
+font-family: monospace;
+color: #a33;
+}
+
+/* Demo Box */
+.box {
+width: 50px;
+height: 50px;
+background-color: lightcoral;
+margin: 2rem auto;
+border-radius: 6px;
+/* Animación simple de ejemplo */
+animation: crecer 3s infinite ease-in-out;
+}
+
+/* Animaciones @keyframes */
+@keyframes crecer {
+from { width: 50px; }
+to { width: 100px; }
+}
+
+@keyframes colorAlt {
+0% { background-color: lightcoral; }
+50% { background-color: aquamarine; height: 20px; }
+100% { background-color: lightcoral; height: 50px; }
+}
+
+/* Clase para demo avanzada */
+.box-avanzada {
+animation: colorAlt 4s infinite ease-in-out;
+}

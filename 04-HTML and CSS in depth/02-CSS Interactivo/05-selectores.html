@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>05 - Selectores y Especificidad en CSS</title>
+  <link rel="stylesheet" href="styles/05-selectores.css" />
+</head>
+<body>
+
+  <h1>05 - Selectores y Especificidad en CSS</h1>
+
+  <section>
+    <h2>Tipos de Selectores</h2>
+    <p>
+      Los selectores indican a qué elementos HTML se aplican las reglas CSS. Aquí se muestran los más comunes:
+    </p>
+    <table>
+    <thead>
+        <tr>
+        <th>Selector</th>
+        <th>Ejemplo</th>
+        <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>Universal</td>
+        <td>*</td>
+        <td>Selecciona todos los elementos HTML de la página.</td>
+        </tr>
+        <tr>
+        <td>Tipo</td>
+        <td>p</td>
+        <td>Selecciona todas las etiquetas &lt;p&gt; (o cualquier otra etiqueta específica).</td>
+        </tr>
+        <tr>
+        <td>Clase</td>
+        <td>.mi-clase</td>
+        <td>Selecciona todos los elementos que tienen la clase "mi-clase". Se usa con punto (.).</td>
+        </tr>
+        <tr>
+        <td>ID</td>
+        <td>#mi-id</td>
+        <td>Selecciona un único elemento que tiene el ID "mi-id". Se usa con el símbolo #.</td>
+        </tr>
+        <tr>
+        <td>Atributo</td>
+        <td>input[type="text"]</td>
+        <td>
+            Selecciona solo los elementos &lt;input&gt; que tienen el atributo <code>type="text"</code>.  
+            Por ejemplo, puedes usarlo para aplicar estilos distintos a los campos de texto en un formulario.
+        </td>
+        </tr>
+        <tr>
+        <td>Pseudoclase</td>
+        <td>a:hover</td>
+        <td>
+            Selecciona los enlaces (&lt;a&gt;) cuando el cursor del mouse pasa por encima de ellos.  
+            Es útil para cambiar el color o subrayado al pasar el mouse (efecto "hover").
+        </td>
+        </tr>
+        <tr>
+        <td>Pseudoelemento</td>
+        <td>p::first-line</td>
+        <td>
+            Selecciona solo la primera línea del texto dentro de un párrafo.  
+            Por ejemplo, puedes hacer que la primera línea se vea en negrita o de otro color.
+        </td>
+        </tr>
+        <tr>
+        <td>Combinado</td>
+        <td>div p.mi-clase</td>
+        <td>
+            Selecciona los elementos &lt;p&gt; que tienen la clase "mi-clase" <strong>solo si están dentro de un &lt;div&gt;</strong>.  
+            Es un selector más específico que combina varios niveles: etiqueta, jerarquía y clase.
+        </td>
+        </tr>
+    </tbody>
+    </table>
+
+  </section>
+
+  <section>
+    <h2>Jerarquía de Especificidad</h2>
+    <p>
+      La especificidad es la forma que tiene CSS de decidir qué reglas aplicar cuando hay conflicto. Esta es la jerarquía:
+    </p>
+    <ol>
+      <li><strong>Estilos en línea</strong>: <code style="color: crimson">style="..."</code></li>
+      <li><strong>IDs</strong>: <code>#elemento</code></li>
+      <li><strong>Clases, atributos, pseudoclases</strong>: <code>.clase</code>, <code>[type]</code>, <code>:hover</code></li>
+      <li><strong>Elementos y pseudoelementos</strong>: <code>div</code>, <code>::before</code></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Cálculo de Especificidad</h2>
+    <p>
+      Cada selector recibe una "puntuación" con formato <strong>(a, b, c, d)</strong>, donde:
+    </p>
+    <ul>
+      <li><strong>a</strong>: Estilos en línea</li>
+      <li><strong>b</strong>: IDs</li>
+      <li><strong>c</strong>: Clases, atributos y pseudoclases</li>
+      <li><strong>d</strong>: Elementos y pseudoelementos</li>
+    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Selector</th>
+          <th>Especificidad</th>
+          <th>Comentarios</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>p</td><td>0,0,0,1</td><td>Un solo elemento</td></tr>
+        <tr><td>.clase</td><td>0,0,1,0</td><td>Una clase</td></tr>
+        <tr><td>#id</td><td>0,1,0,0</td><td>Un ID</td></tr>
+        <tr><td>div p.clase</td><td>0,0,1,2</td><td>2 elementos, 1 clase</td></tr>
+        <tr><td>p#id</td><td>0,1,0,1</td><td>ID + elemento</td></tr>
+        <tr><td>style="..."</td><td>1,0,0,0</td><td>Estilo en línea</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Ejemplo Práctico</h2>
+    <p>Solo una regla se aplicará según la especificidad:</p>
+    <div class="selector-ejemplo" id="ejemplo" style="color: red;">
+      ¡Texto con múltiples reglas!
+    </div>
+  </section>
+
+
+
+    <section>
+    <h2>Selectores Combinados</h2>
+    <p>
+        Los selectores combinados permiten seleccionar elementos en relación con otros. Aquí están los principales tipos:
+    </p>
+    <table>
+        <thead>
+        <tr>
+            <th>Combinador</th>
+            <th>Ejemplo</th>
+            <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Descendiente (<code> </code>)</td>
+            <td>div p</td>
+            <td>Selecciona todos los &lt;p&gt; que están dentro de un &lt;div&gt;, sin importar el nivel.</td>
+        </tr>
+        <tr>
+            <td>Hijo directo (<code>&gt;</code>)</td>
+            <td>div &gt; p</td>
+            <td>Selecciona solo los &lt;p&gt; que son hijos directos de un &lt;div&gt;.</td>
+        </tr>
+        <tr>
+            <td>Hermanos adyacentes (<code>+</code>)</td>
+            <td>h2 + p</td>
+            <td>Selecciona el &lt;p&gt; inmediatamente después de un &lt;h2&gt;.</td>
+        </tr>
+        <tr>
+            <td>Hermanos generales (<code>~</code>)</td>
+            <td>h2 ~ p</td>
+            <td>Selecciona todos los &lt;p&gt; que son hermanos de un &lt;h2&gt;, pero no necesariamente inmediatos.</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="combinador-ejemplo">
+        <h2>Subtítulo</h2>
+        <p>Este párrafo sigue inmediatamente al &lt;h2&gt; (selector <code>h2 + p</code>).</p>
+        <p>Este párrafo también es hermano, pero no adyacente (selector <code>h2 ~ p</code>).</p>
+        <div>
+        <p>Este está anidado dentro de otro div (descendiente: <code>div p</code>)</p>
+        </div>
+    </div>
+    </section>
+
+</body>
+</html>

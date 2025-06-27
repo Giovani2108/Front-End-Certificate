@@ -1,0 +1,47 @@
+/* Universal selector para resetear márgenes y definir color de texto */
+* {
+  padding: 0;
+  margin: 0;
+  color: pink;
+}
+
+/* Contenedor principal ocupa toda la altura de la pantalla y tiene fondo */
+.container {
+  min-height: 100vh;
+  background-color: bisque;
+}
+
+/* Estilos para los grupos de letras */
+.letters {
+    display: flex;                  /* Alineación horizontal */
+    justify-content: center;       /* Centrado horizontal */
+    padding-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;     /* Convierte texto a mayúsculas */
+    font-size: 60px;               /* Tamaño grande para visibilidad */
+}
+
+/* Estilos para cada letra individual (<p>) dentro de .letters */
+.letters p {
+    text-align: center;                            /* Centra el texto */
+    background-color: rgb(250,150,100);            /* Color de fondo */
+    width: 70px;                                    /* Ancho fijo */
+    margin-right: 1.5px;                            /* Espaciado lateral */
+    border-radius: 15%;                             /* Bordes redondeados */
+    border-color: rgb(250, 125, 75);                /* Color del borde */
+    border-style: solid;                            /* Tipo de borde */
+}
+
+/* Cuando pasamos el mouse por encima de .letters,
+   los elementos 'p' en posiciones pares (even) rotan en eje Y */
+.letters:hover p:nth-child(even) {
+    transform: rotateY(360deg);     /* Rotación en el eje Y */
+    transition: 0.5s;               /* Duración de la transición */
+}
+
+/* Cuando pasamos el mouse por encima de .letters,
+   los elementos 'p' en posiciones impares (odd) rotan en eje X */
+.letters:hover p:nth-child(odd) {
+    transform: rotateX(360deg);     /* Rotación en el eje X (corregido) */
+    transition: 1.5s;               /* Duración de la transición */
+}

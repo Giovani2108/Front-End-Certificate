@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>07 - Efectos de Texto en CSS</title>
+  <link rel="stylesheet" href="styles/07-text-effects.css" />
+</head>
+<body>
+
+  <h1>07 - Efectos de Texto en CSS</h1>
+
+  <section>
+    <h2>Propiedades Principales de Estilo de Texto</h2>
+    <p>
+      Las siguientes propiedades permiten modificar el aspecto del texto, ya sea para mejorar su legibilidad, estética o énfasis visual:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Propiedad</th>
+          <th>Valores</th>
+          <th>Descripción</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>text-transform</code></td>
+          <td>none, uppercase, lowercase, capitalize</td>
+          <td>Transforma el texto a mayúsculas, minúsculas o capitalización por palabra.</td>
+          <td class="example text-transform-example">texto en mayúsculas</td>
+        </tr>
+        <tr>
+          <td><code>font-style</code></td>
+          <td>normal, italic, oblique</td>
+          <td>Aplica estilos inclinados o cursivos al texto.</td>
+          <td class="example font-style-example">Texto en cursiva</td>
+        </tr>
+        <tr>
+          <td><code>font-weight</code></td>
+          <td>normal, bold, bolder, lighter, 100–900</td>
+          <td>Controla el grosor del texto.</td>
+          <td class="example font-weight-example">Texto en negrita</td>
+        </tr>
+        <tr>
+          <td><code>text-decoration</code></td>
+          <td>none, underline, overline, line-through</td>
+          <td>Subraya o tacha el texto según lo indicado.</td>
+          <td class="example text-decoration-example">Texto subrayado</td>
+        </tr>
+        <tr>
+          <td><code>text-decoration-style</code></td>
+          <td>solid, double, dotted, dashed, wavy</td>
+          <td>Define el estilo visual de la decoración aplicada (ej. subrayado ondulado).</td>
+          <td class="example text-decoration-style">Subrayado ondulado</td>
+        </tr>
+        <tr>
+          <td><code>text-shadow</code></td>
+          <td>offset-x offset-y blur color</td>
+          <td>Agrega sombra al texto.</td>
+          <td class="example text-shadow-example">Texto con sombra</td>
+        </tr>
+        <tr>
+          <td><code>text-align</code></td>
+          <td>left, right, center, justify</td>
+          <td>Alinea el texto horizontalmente.</td>
+          <td class="example text-align-example">Texto centrado</td>
+        </tr>
+        <tr>
+          <td><code>text-indent</code></td>
+          <td>medida (px, em, %)</td>
+          <td>Indenta la primera línea de un párrafo.</td>
+          <td class="example text-indent-example">Este texto tiene sangría en la primera línea.</td>
+        </tr>
+        <tr>
+          <td><code>text-overflow</code></td>
+          <td>clip, ellipsis</td>
+          <td>Controla cómo se muestra el desbordamiento del texto.</td>
+          <td class="example text-overflow-example">Texto largo que no cabe completamente en el contenedor.</td>
+        </tr>
+        <tr>
+          <td><code>text-combine-upright</code></td>
+          <td>none, all</td>
+          <td>Combina caracteres verticalmente en un solo glifo (útil en idiomas como japonés).</td>
+          <td class="example text-combine-example">2019年</td>
+        </tr>
+        <tr>
+          <td><code>text-emphasis</code></td>
+          <td>color style símbolo</td>
+          <td>Agrega énfasis visual al texto (funciona en vertical).</td>
+          <td class="example text-emphasis-example">強調</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Propiedades Avanzadas de Texto</h2>
+    <p>Estas propiedades ayudan a controlar el flujo, orientación, y comportamiento del texto en su contenedor.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Propiedad</th>
+          <th>Valores</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>word-wrap</code></td>
+          <td>normal, break-word</td>
+          <td>Permite romper palabras largas en múltiples líneas.</td>
+        </tr>
+        <tr>
+          <td><code>word-break</code></td>
+          <td>normal, break-all, keep-all</td>
+          <td>Determina cómo se dividen las palabras al final de una línea.</td>
+        </tr>
+        <tr>
+          <td><code>writing-mode</code></td>
+          <td>horizontal-tb, vertical-rl, vertical-lr</td>
+          <td>Establece la dirección del texto (horizontal o vertical).</td>
+        </tr>
+        <tr>
+          <td><code>text-justify</code></td>
+          <td>auto, inter-word, inter-character</td>
+          <td>Controla la forma de justificar el texto cuando se usa <code>text-align: justify</code>.</td>
+        </tr>
+        <tr>
+          <td><code>text-underline-position</code></td>
+          <td>auto, under, left, right</td>
+          <td>Posiciona la línea subrayada respecto al texto.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</body>
+</html>

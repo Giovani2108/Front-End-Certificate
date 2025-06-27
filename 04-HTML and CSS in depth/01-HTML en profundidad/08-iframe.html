@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>07 - Uso de iframes en HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>07 - Uso de <code>&lt;iframe&gt;</code> en HTML</h1>
+  <p>El elemento <code>&lt;iframe&gt;</code> permite incrustar otra página HTML o contenido (como un video o un mapa) dentro de la actual.</p>
+
+  <form onsubmit="return false;">
+
+    <fieldset>
+      <legend><code>src</code> y <code>title</code></legend>
+      <p>Este iframe incrusta una web externa:</p>
+      <iframe src="https://developer.mozilla.org/" width="100%" height="300" title="Documentación de MDN"></iframe>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>iframe</code> para videos</legend>
+      <p>Video de YouTube embebido:</p>
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="Video de YouTube"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+        allowfullscreen>
+      </iframe>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>srcdoc</code> (HTML en línea)</legend>
+      <p>HTML directamente dentro del iframe:</p>
+      <iframe srcdoc="<h2>Hola desde el iframe</h2><p>Contenido interno</p>" width="100%" height="150" title="Iframe con HTML interno"></iframe>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>sandbox</code> con permisos selectivos</legend>
+      <p>Este iframe aplica todas las restricciones de seguridad con sandbox, pero con los prametros allow se especifica que si permita formularios y scripts:</p>
+      <iframe 
+        src="https://developer.mozilla.org/" 
+        width="100%" 
+        height="200" 
+        sandbox="allow-forms allow-scripts" 
+        title="Iframe con sandbox parcial">
+      </iframe>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>iframe</code> con <code>name</code> y tamaño personalizado</legend>
+      <iframe 
+        name="mi-frame" 
+        width="400" 
+        height="200" 
+        src="about:blank" 
+        title="Iframe con nombre">
+      </iframe>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>loading="lazy"</code> (carga diferida)</legend>
+      <p>Este iframe se carga solo cuando es visible:</p>
+      <iframe 
+        src="https://es.wikipedia.org" 
+        width="100%" 
+        height="300" 
+        loading="lazy" 
+        title="Wikipedia en iframe">
+      </iframe>
+    </fieldset>
+
+  </form>
+
+  <footer>
+    <p>Última actualización: <time datetime="2025-06-26">26 de junio de 2025</time></p>
+  </footer>
+</body>
+</html>

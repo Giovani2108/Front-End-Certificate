@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>06 - Pseudoelementos y Pseudoclases en CSS</title>
+  <link rel="stylesheet" href="styles/06-pseudo-elements.css" />
+</head>
+<body>
+
+  <h1>06 - Pseudoelementos y Pseudoclases</h1>
+
+  <section>
+    <h2>¿Qué es un pseudoelemento?</h2>
+    <p>
+      Los pseudoelementos permiten aplicar estilos a partes específicas de un elemento sin modificar el HTML.  
+      Se escriben con <strong>doble dos puntos (::)</strong>.
+    </p>
+    <pre><code>selector::pseudo-element {
+  propiedad: valor;
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>::first-letter</h2>
+    <ul class="first-letter-demo">
+      <li>Pan tostado con aceite de oliva.</li>
+      <li>Café negro sin azúcar.</li>
+      <li>Jugo de naranja natural.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>::first-line</h2>
+    <ul class="first-line-demo">
+      <li>Este texto tiene una línea larga para mostrar el efecto de ::first-line al ajustar el tamaño de la ventana.</li>
+      <li>Otro texto de ejemplo que ilustra cómo cambia la línea.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>::selection</h2>
+    <p class="selection-demo">
+      Selecciona este texto con el cursor para ver cómo cambia el color y el fondo usando <code>::selection</code>.
+    </p>
+  </section>
+
+  <section>
+    <h2>::marker</h2>
+    <ul class="marker-demo">
+      <li>Elemento con marcador personalizado.</li>
+      <li>Otro ítem destacado visualmente.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>::before y ::after</h2>
+    <div class="tips-demo">
+      <p class="tip">No enjuagues la pasta después de escurrirla.</p>
+      <p>Este párrafo no tiene el pseudoelemento aplicado.</p>
+      <p class="tip">Pela y quita las semillas de los tomates grandes.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Pseudoclases :hover y :active</h2>
+    <p>
+      Estas pseudoclases permiten aplicar estilos cuando el usuario interactúa con elementos:
+    </p>
+    <ul>
+      <li><code>:hover</code>: Cuando el cursor pasa por encima.</li>
+      <li><code>:active</code>: Mientras se hace clic o mantiene presionado.</li>
+    </ul>
+    <div class="buttons-demo">
+      <button class="cursor interactivos">Pasa el cursor</button>
+      <button class="clic interactivos">Haz clic</button>
+    </div>
+  </section>
+
+</body>
+</html>

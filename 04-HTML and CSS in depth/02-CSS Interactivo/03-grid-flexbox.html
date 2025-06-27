@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>03 - Grid y Flexbox</title>
+  <link rel="stylesheet" href="styles/03-grid-flexbox.css" />
+</head>
+<body>
+
+  <h1>03 - Grid y Flexbox en CSS</h1>
+
+  <section>
+    <h2>¿Qué son Grid y Flexbox?</h2>
+    <p>
+      Son métodos modernos para organizar elementos en una página. Flexbox está pensado para alinear en una sola dimensión (horizontal o vertical), mientras que Grid permite organizar en dos dimensiones (filas y columnas).
+    </p>
+  </section>
+
+  <section>
+    <h2>Grid: propiedades básicas</h2>
+    <p>Se define así:</p>
+    <pre><code>selector {
+  display: grid;
+}</code></pre>
+
+    <h3>Contenedor Grid</h3>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Descripción</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>grid-template-columns</td><td>Define columnas (puede usar px, %, fr, repeat())</td></tr>
+        <tr><td>grid-template-rows</td><td>Define filas</td></tr>
+        <tr><td>grid-template-areas</td><td>Define zonas con nombres</td></tr>
+        <tr><td>gap / row-gap / column-gap</td><td>Espacio entre filas o columnas</td></tr>
+        <tr><td>justify-items / align-items</td><td>Alineación de los ítems en el grid</td></tr>
+        <tr><td>place-items</td><td>Shorthand de las dos anteriores</td></tr>
+        <tr><td>justify-content / align-content</td><td>Alineación del grid dentro del contenedor</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Items dentro del Grid</h3>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Descripción</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>grid-column / grid-row</td><td>Define en qué columna/fila inicia y termina el ítem</td></tr>
+        <tr><td>justify-self / align-self</td><td>Alineación individual dentro del espacio asignado</td></tr>
+        <tr><td>place-self</td><td>Shorthand de los dos anteriores</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="grid-demo">
+    <h3>Ejemplo de Grid</h3>
+    <div class="grid-container">
+      <div class="grid-item">A</div>
+      <div class="grid-item">B</div>
+      <div class="grid-item">C</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Flexbox: propiedades básicas</h2>
+    <p>Se define así:</p>
+    <pre><code>selector {
+  display: flex;
+}</code></pre>
+
+    <h3>Contenedor Flex</h3>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Descripción</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>flex-direction</td><td>Dirección: fila, columna, reverso</td></tr>
+        <tr><td>flex-wrap</td><td>Permite que los elementos se ajusten (wrap) o no (nowrap)</td></tr>
+        <tr><td>justify-content</td><td>Alinea en el eje principal</td></tr>
+        <tr><td>align-items</td><td>Alinea en el eje cruzado</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Items Flex</h3>
+    <table>
+      <thead>
+        <tr><th>Propiedad</th><th>Descripción</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>flex-grow / flex-shrink</td><td>Permite que crezca o reduzca en proporción</td></tr>
+        <tr><td>flex-basis</td><td>Tamaño inicial del ítem</td></tr>
+        <tr><td>order</td><td>Cambia el orden visual del ítem</td></tr>
+        <tr><td>align-self</td><td>Alineación individual</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="flex-demo">
+    <h3>Ejemplo de Flexbox</h3>
+    <div class="flex-container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+  </section>
+
+</body>
+</html>

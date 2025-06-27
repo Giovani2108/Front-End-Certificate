@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>01 - Introducción a Flexbox</title>
+  <link rel="stylesheet" href="styles/01-flexbox.css" />
+</head>
+<body>
+
+  <h1>01 - Introducción a Flexbox</h1>
+
+  <p>
+    Flexbox es un modelo de diseño que facilita la distribución, alineación y
+    orden de elementos dentro de un contenedor, incluso cuando su tamaño es
+    dinámico o desconocido.
+  </p>
+
+  <form onsubmit="return false;">
+    <fieldset>
+      <legend><code>display: flex;</code> - Contenedor flex</legend>
+      <div class="flex-container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>justify-content</code> - Alineación en el eje principal</legend>
+      <div class="flex-container justify-center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>flex-direction</code> - Dirección del eje principal</legend>
+      <div class="flex-container flex-column">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>align-items</code> - Alineación en el eje transversal</legend>
+      <div class="flex-container align-end">
+        <div class="box">X</div>
+        <div class="box">Y</div>
+        <div class="box">Z</div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>flex-wrap</code> - Permitir salto de línea (si es necesario)</legend>
+      <div class="flex-container flex-wrap">
+        <div class="box">10</div>
+        <div class="box">20</div>
+        <div class="box">30</div>
+        <div class="box">40</div>
+        <div class="box">50</div>
+        <div class="box">60</div>
+        <div class="box">70</div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><code>align-self</code> y <code>flex-grow</code> - Ajustes individuales</legend>
+      <div class="flex-container">
+        <div class="box">1</div>
+        <div class="box box-grow">2</div>
+        <div class="box box-center">3</div>
+      </div>
+    </fieldset>
+  </form>
+
+</body>
+</html>

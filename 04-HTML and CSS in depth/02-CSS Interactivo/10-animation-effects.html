@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>10 - Efectos con Animation y Transform</title>
+  <link rel="stylesheet" href="styles/10-animation-effects.css" />
+</head>
+<body>
+
+  <h1>10 - Efectos con <code>transform</code>, <code>transition</code> y <code>animation</code></h1>
+
+  <section>
+    <h2>¿Qué es <code>transform</code>?</h2>
+    <p>Sirve para cambiar la forma, tamaño o posición de un elemento en la pantalla. Puedes rotarlo, moverlo, escalarlo o sesgarlo.</p>
+  </section>
+
+  <section>
+    <h3>Ejemplos básicos de <code>transform</code></h3>
+
+    <pre><code>
+.sample-class {
+  transform: rotate(60deg);
+}
+    </code></pre>
+
+    <pre><code>
+.sample-class {
+  transform: none;
+}
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Funciones <code>transform</code> y sus variaciones</h3>
+
+    <table>
+      <thead>
+        <tr><th>Función</th><th>Descripción</th><th>Ejemplo</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>matrix()</td>
+          <td>Transformación compleja con 6 valores</td>
+          <td><code>transform: matrix(1, 2, 3, 4, 5, 6);</code></td>
+        </tr>
+        <tr>
+          <td>rotate()</td>
+          <td>Gira el elemento en grados</td>
+          <td><code>transform: rotate3d(3, 2, 1, 100deg);</code></td>
+        </tr>
+        <tr>
+          <td>translate()</td>
+          <td>Mueve el elemento en x, y, z</td>
+          <td><code>transform: translate3d(10px, 20px, 30px);</code></td>
+        </tr>
+        <tr>
+          <td>scale()</td>
+          <td>Cambia el tamaño del elemento</td>
+          <td><code>transform: scale3d(2, 1, 0.3);</code></td>
+        </tr>
+        <tr>
+          <td>skew()</td>
+          <td>Sesga el elemento en ángulo</td>
+          <td><code>transform: skew(100deg);</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h3>Valores globales para <code>transform</code> y su uso</h3>
+
+    <p>Estos valores controlan cómo se hereda o reinicia la propiedad <code>transform</code>:</p>
+
+    <ul>
+        <li><code>inherit</code>: El elemento toma el valor de <code>transform</code> de su elemento padre.</li>
+        <li><code>initial</code>: Se restablece el valor a su valor por defecto, que es <code>none</code>.</li>
+        <li><code>revert</code>: Revierte la propiedad al valor establecido por la hoja de estilo del usuario o navegador (por ejemplo, si una regla anterior la modificó).</li>
+        <li><code>revert-layer</code>: Similar a <code>revert</code>, pero para capas de estilos específicas en cascada (CSS Layers).</li>
+        <li><code>unset</code>: Actúa como <code>inherit</code> si la propiedad es heredable o como <code>initial</code> si no lo es. En este caso, <code>transform</code> no es heredable, así que equivale a <code>initial</code>.</li>
+    </ul>
+
+    <pre><code>
+    .sample-class {
+    transform: inherit;      /* Hereda la transformación del padre */
+    }
+    .sample-class {
+    transform: initial;      /* Reinicia la transformación a 'none' */
+    }
+    .sample-class {
+    transform: revert;       /* Revierte a la regla CSS previa o del navegador */
+    }
+    .sample-class {
+    transform: revert-layer; /* Reversión en capas CSS específicas */
+    }
+    .sample-class {
+    transform: unset;        /* Hereda o reinicia según la propiedad sea heredable */
+    }
+    </code></pre>
+  <section>
+
+
+  <section>
+    <h3>Múltiples transformaciones juntas</h3>
+    <p>Puedes combinar varias transformaciones en la misma regla:</p>
+
+    <pre><code>
+.sample-class {
+  transform: rotate(45deg) scale(1.5) translate(45px);
+}
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Propiedad <code>transform-origin</code></h3>
+    <p>Define el punto de anclaje para la transformación:</p>
+
+    <pre><code>
+.sample-class {
+  transform-origin: 10px 10px;
+}
+.sample-class {
+  transform-origin: right bottom;
+}
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Propiedad <code>transition</code></h2>
+
+    <p>Permite animar suavemente cambios de propiedades.</p>
+
+    <h3>Sintaxis shorthand</h3>
+    <pre><code>
+transition: property duration timing-function delay;
+    </code></pre>
+
+    <p>Ejemplo:</p>
+    <pre><code>
+transition: margin-left 2s ease-in-out 0.5s;
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Propiedad <code>animation</code> y <code>@keyframes</code></h2>
+
+    <p><code>animation</code> combina muchas sub-propiedades para crear animaciones complejas.</p>
+
+    <h3>Sintaxis shorthand</h3>
+    <pre><code>
+animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+    </code></pre>
+
+    <p>Ejemplo básico:</p>
+    <pre><code>
+.sample-class {
+  animation: none 2s ease 0.5s 4 normal none running;
+}
+    </code></pre>
+
+    <h3>Ejemplo <code>@keyframes</code></h3>
+
+    <pre><code>
+@keyframes mymove {
+  from { bottom: 0px; }
+  to { bottom: 100px; }
+}
+    </code></pre>
+
+    <h3>Uso de porcentajes en <code>@keyframes</code></h3>
+    <pre><code>
+@keyframes mymove {
+  0%, 100% { background-color: blue; }
+  50% { background-color: green; }
+}
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Múltiples animaciones</h3>
+    <p>Puedes usar varias animaciones en un mismo elemento separándolas por coma:</p>
+    <pre><code>
+#some-class {
+  animation: animation-a 2s linear infinite alternate,
+             animation-b 3s ease infinite alternate;
+}
+    </code></pre>
+  </section>
+
+  <section class="demo">
+    <h3>Demo visual</h3>
+    <div class="box rotate-scale-translate">Ejemplo</div>
+  </section>
+
+</body>
+</html>

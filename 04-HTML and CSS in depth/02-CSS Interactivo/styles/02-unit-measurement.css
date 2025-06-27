@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: #f0f8ff;
+  color: #222;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 0.4rem 0.8rem;
+  text-align: left;
+}
+
+th {
+  background-color: #cce7f0;
+}
+
+.box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #8cc0de;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Ejemplos de unidades */
+
+.absolute {
+  width: 200px; /* Unidad absoluta */
+}
+
+.relative {
+  width: 20vw; /* 20% del ancho del viewport */
+  background-color: #4a90e2;
+}
+
+.relative-rem {
+  width: 10rem; /* 10 veces el tamaño raíz de la fuente */
+  background-color: #7fbf7f;
+}

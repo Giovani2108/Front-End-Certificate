@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>09 - Animaciones con @keyframes</title>
+  <link rel="stylesheet" href="styles/09-keyframes.css">
+  
+</head>
+<body>
+
+  <h1>09 - Animaciones CSS con @keyframes</h1>
+
+  <section>
+    <h2>¿Qué es @keyframes?</h2>
+    <p>
+      @keyframes es una regla en CSS que te permite crear animaciones paso a paso. 
+      Puedes cambiar propiedades (como tamaño, color, posición) desde un estado inicial hasta uno final, y más.
+    </p>
+    <p>Piensa en mover un objeto de un lugar a otro o cambiar su color poco a poco, ¡todo eso con animaciones suaves!</p>
+  </section>
+
+  <section>
+    <h2>Sintaxis básica</h2>
+    <pre><code>@keyframes nombreAnimacion {
+  from {
+    propiedad: valor-inicial;
+  }
+  to {
+    propiedad: valor-final;
+  }
+}</code></pre>
+
+    <p>
+      <strong>from</strong> es el inicio de la animación y <strong>to</strong> el final.
+      También puedes usar porcentajes para más pasos:
+    </p>
+    <pre><code>@keyframes nombreAnimacion {
+  0% { /* inicio */ }
+  50% { /* paso intermedio */ }
+  100% { /* fin */ }
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>Ejemplo práctico</h2>
+    <p>Este cuadro cambia su ancho de 50px a 100px y vuelve a empezar, una y otra vez.</p>
+    <div class="box"></div>
+
+    <pre><code>.box {
+  width: 50px;
+  height: 50px;
+  background-color: lightcoral;
+  animation: crecer 3s infinite ease-in-out;
+}
+
+@keyframes crecer {
+  from { width: 50px; }
+  to { width: 100px; }
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>Animación con varios pasos</h2>
+    <p>Con porcentajes puedes hacer animaciones más complejas, cambiando varias propiedades:</p>
+
+    <div class="box box-avanzada"></div>
+
+    <pre><code>@keyframes colorAlt {
+  0% {
+    background-color: lightcoral;
+    height: 50px;
+  }
+  50% {
+    background-color: aquamarine;
+    height: 20px;
+  }
+  100% {
+    background-color: lightcoral;
+    height: 50px;
+  }
+}
+
+.box-avanzada {
+  animation: colorAlt 4s infinite ease-in-out;
+}</code></pre>
+
+    <p>
+      Aquí el color y el tamaño cambian en diferentes etapas, ¡así tus animaciones pueden ser súper creativas!
+    </p>
+  </section>
+
+  <section>
+    <h2>Propiedades importantes para animaciones</h2>
+    <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
+      <thead>
+        <tr style="background: #ddeeff;">
+          <th style="border:1px solid #aaa; padding:0.5rem;">Propiedad</th>
+          <th style="border:1px solid #aaa; padding:0.5rem;">Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="border:1px solid #aaa; padding:0.5rem;">animation-name</td><td style="border:1px solid #aaa; padding:0.5rem;">Nombre de la animación @keyframes</td></tr>
+        <tr><td style="border:1px solid #aaa; padding:0.5rem;">animation-duration</td><td style="border:1px solid #aaa; padding:0.5rem;">Cuánto dura la animación (ej: 3s)</td></tr>
+        <tr><td style="border:1px solid #aaa; padding:0.5rem;">animation-iteration-count</td><td style="border:1px solid #aaa; padding:0.5rem;">Cuántas veces se repite (ej: infinite para infinito)</td></tr>
+        <tr><td style="border:1px solid #aaa; padding:0.5rem;">animation-timing-function</td><td style="border:1px solid #aaa; padding:0.5rem;">Cómo va la velocidad (ej: ease, linear)</td></tr>
+        <tr><td style="border:1px solid #aaa; padding:0.5rem;">animation-direction</td><td style="border:1px solid #aaa; padding:0.5rem;">Dirección: normal, reverse, alternate</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Resumen rápido</h2>
+    <ul>
+      <li><strong>@keyframes</strong> define los pasos de la animación</li>
+      <li><strong>animation</strong> aplica la animación a un elemento</li>
+      <li>Usa <code>from</code>/<code>to</code> o <code>0%</code>/<code>100%</code> para marcar inicio y fin</li>
+      <li>Puedes agregar más pasos con porcentajes intermedios para animaciones más ricas</li>
+      <li>La animación puede repetirse, ir y volver o parar cuando quieras</li>
+    </ul>
+  </section>
+
+</body>
+</html>
